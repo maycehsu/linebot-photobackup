@@ -13,8 +13,15 @@ app = Flask(__name__)
 def index():
     return "<p>Hello World!</p>"
 
+CHANNEL_TOKEN_FILE = 'channel_token.dat'
+CHANNEL_TOKEN = ''
+with open(CHANNEL_TOKEN_FILE, 'r') as f:
+    CHANNEL_TOKEN = f.read()
 
-CHANNEL_TOKEN ='slFECFWanZ9qcSrGRxeCjFw2igBtbuD4YfDwg2ZzRYxf6kL+AcxFzA21cLzpCZC+20//h5ozalPU1nn1EzxJIZ+/TPlEivOjzWwh2ypxcfgjWT8Z1F5bnUU9QQ2rRMmbE9XDSBFncP+vqoabxrQBnAdB04t89/1O/w1cDnyilFU='
+if not CHANNEL_TOKEN:
+    print 'cannot get line channel token from file %s, get the line channel token from line developer site, exit'%(CHANNEL_TOKEN_FILE)
+    exit(0)
+    
 CFG_FILE='bot.cfg'
 
 img_upload_queue=[]
