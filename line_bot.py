@@ -70,10 +70,8 @@ def handle_request(msg):
         if mtype == handler:
             type_handler[handler](msg)
             break
-    else:
-        print 'Received'
-        send(msg, 'Received')
-
+    
+    
 def send_help(msg):
     all_cmds = ''
     cmd_title = '{-10}:{-10}:{-10}:\n'.format('command', 'usage', 'description')
