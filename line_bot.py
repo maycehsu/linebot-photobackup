@@ -229,7 +229,6 @@ def sendReply(token, text):
 def sendText(user, text):
     LINE_API = 'https://api.line.me/v2/bot/message/push'
 
-    CHANNEL_TOKEN ='slFECFWanZ9qcSrGRxeCjFw2igBtbuD4YfDwg2ZzRYxf6kL+AcxFzA21cLzpCZC+20//h5ozalPU1nn1EzxJIZ+/TPlEivOjzWwh2ypxcfgjWT8Z1F5bnUU9QQ2rRMmbE9XDSBFncP+vqoabxrQBnAdB04t89/1O/w1cDnyilFU='
                    
     print 'Channel Token=', CHANNEL_TOKEN
     headers = {
